@@ -21,7 +21,7 @@ public class AsteroidAssembler {
    
     public static Orbit buildOrbit(String D) throws SQLException, ClassNotFoundException{
        
-             DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+             DBConnect DB = new DBConnect("asteroids","3306","root","root");
         try (Connection C = DB.getConnection()) {
             DB.executeUseQuery(C);
             String query = "Select * from orbit where Designation = '" + D + "'";
@@ -46,7 +46,7 @@ public class AsteroidAssembler {
     }
     
 public static Registry  buildRegistry(String D) throws SQLException, ClassNotFoundException{
-    DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+    DBConnect DB = new DBConnect("asteroids","3306","root","root");
        Connection C = DB.getConnection();
             DB.executeUseQuery(C);
             String query = "Select * from registry where Designation = '" + D + "'";
@@ -91,7 +91,7 @@ public static Registry  buildRegistry(String D) throws SQLException, ClassNotFou
     
 }
 public static SpatialCoord buildSpatialCoord(String D) throws SQLException, ClassNotFoundException{
-    DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+    DBConnect DB = new DBConnect("asteroids","3306","root","root");
        Connection C = DB.getConnection();
             DB.executeUseQuery(C);
             String query = "Select * from SpatialCoord where Designation = '" + D + "'";
@@ -113,7 +113,7 @@ public static SpatialCoord buildSpatialCoord(String D) throws SQLException, Clas
     
 }
 public static Specification buildSpecification(String D) throws SQLException, ClassNotFoundException{
-    DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+    DBConnect DB = new DBConnect("asteroids","3306","root","root");
        Connection C = DB.getConnection();
             DB.executeUseQuery(C);
             String query = "Select * from specifications where Designation = '" + D + "'";
@@ -140,7 +140,7 @@ public static Specification buildSpecification(String D) throws SQLException, Cl
 
 public static  SimpleComposition buildSimpleComposition(String D) throws SQLException, ClassNotFoundException{
         
-        DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+        DBConnect DB = new DBConnect("asteroids","3306","root","root");
         try (Connection C = DB.getConnection()) {
             DB.executeUseQuery(C);
             
@@ -164,7 +164,7 @@ public static  SimpleComposition buildSimpleComposition(String D) throws SQLExce
 }
 public static CommonComposition buildCommonComposition(String D) throws SQLException, ClassNotFoundException{
     
-     DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+     DBConnect DB = new DBConnect("asteroids","3306","root","root");
         try (Connection C = DB.getConnection()) {
             DB.executeUseQuery(C);
             
@@ -190,7 +190,7 @@ public static CommonComposition buildCommonComposition(String D) throws SQLExcep
         
     public static PreciousComposition buildPreciousComposition(String D) throws SQLException, ClassNotFoundException{
         
-         DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+         DBConnect DB = new DBConnect("asteroids","3306","root","root");
         try (Connection C = DB.getConnection()) {
             DB.executeUseQuery(C);
             
@@ -218,7 +218,7 @@ public static CommonComposition buildCommonComposition(String D) throws SQLExcep
     
     
 public static StrategicComposition buildStrategicComposition(String D) throws SQLException, ClassNotFoundException{
-    DBConnect DB = new DBConnect("asteroids","3306","root","%G0d5peed");
+    DBConnect DB = new DBConnect("asteroids","3306","root","root");
         try (Connection C = DB.getConnection()) {
             DB.executeUseQuery(C);
             
