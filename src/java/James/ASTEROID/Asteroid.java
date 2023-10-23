@@ -113,7 +113,7 @@ public abstract class Asteroid {
 
     @Override
     public String toString() {
-        return "<h3>" +"<br>"+"</br>"
+        return "<h2>" +"<br>"+"</br>"
                 +" Designation: " + Designation + "<br>"+"</br>"+
                 " Registry " + registry + "<br>"+"</br>"+
                 " Location: " + location + "<br>"+"</br>"+
@@ -122,7 +122,7 @@ public abstract class Asteroid {
                 " Common Composition: " + cComp + "<br>"+"</br>"+
                 " Precious Composition: " + pComp + "<br>"+"</br>"+
                 " Simple Composition: " + sComp + "<br>"+"</br>"+
-                " Strategic Composition: " + stComp + "</h3>";
+                " Strategic Composition: " + stComp + "</h2>";
     }
             
             
