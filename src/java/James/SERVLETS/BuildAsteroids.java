@@ -48,25 +48,33 @@ public class BuildAsteroids extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet BuildAsteroids</title>"); 
+            out.println("<link rel=\"stylesheet\" href=\"style.css\">");
             out.println("</head>");
             out.println("<body>");
+            out.println("<div class =\"asteroid_gui_container\">");
             out.println("<h1>Asteroid Database Application </h1>");
-            
+            out.println("<div class = \"gif\">");
+            out.println(" <img src=\"https://media.tenor.com/XHZnTUUa7H8AAAAd/expanse-asteroid.gif\" alt=\"Asteroid Gif\"/>");
+             out.println("</div>");
+    
+            out.println("<div class=\"gui\">");
             if(T.equals("Carbon") && D.startsWith("C")){
             AsteroidCarbon AC = new AsteroidCarbon(D);
             out.println(AC.toString());
             }
-             if(T.equals("Silicone")&& D.startsWith("S")){
+            else if(T.equals("Silicone")&& D.startsWith("S")){
             AsteroidSilicone AS = new AsteroidSilicone(D);
             out.println(AS.toString());
              }
             
-             if(T.equals("Metal")&& D.startsWith("M")){
+            else if(T.equals("Metal")&& D.startsWith("M")){
             AsteroidMetal AM = new AsteroidMetal(D);
             out.println(AM.toString());
             }else{
-                  out.println("<h2>The type entered does not match the designation type.\n Input appropriate Type</h1>");
+                  out.println("<h2>The type entered does not match the designation type.\n Input appropriate Type</h2>");
               }
+             out.println("</div>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
